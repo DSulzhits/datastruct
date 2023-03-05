@@ -25,11 +25,4 @@ class Stack:
         self.top = self.top.next_node
         return remove_last.data
 
-# stack = Stack()
-# stack.push('data1')
-# stack.push('data2')
-# stack.push('data3')
-# print(stack.top.data)
-# print(stack.top.next_node.data)
-# print(stack.top.next_node.next_node.data)
-# print(stack.top.next_node.next_node.next_node)
+
