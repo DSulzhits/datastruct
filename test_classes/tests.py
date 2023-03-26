@@ -91,6 +91,6 @@ class TestLinkedList(unittest.TestCase):
 
     def test_get_data_by_id(self):
         ll = LinkedList()
-        ll.insert_at_end('idusername')
+        ll.insert_beginning('idusername')
         ll.insert_at_end({'id': 2, 'username': 'mosh_s'})
         self.assertEqual(ll.get_data_by_id(2), {'id': 2, 'username': 'mosh_s'})

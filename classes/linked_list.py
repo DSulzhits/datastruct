@@ -58,33 +58,24 @@ class LinkedList:
         """Метод для получения данных о пользователе по его id"""
         current_node = self.beginning
         while current_node:
-            if isinstance(current_node.data, dict) and "id" in current_node.data:
+            try:
                 if user_id == current_node.data['id']:
                     return current_node.data
-
-            else:
+            except TypeError:
                 print("Данные не являются словарем или в словаре нет id")
             current_node = current_node.next_node
+
         # current_node = self.beginning
-        # try:
-        #     while current_node:
+        # while current_node:
+        #     if isinstance(current_node.data, dict) and "id" in current_node.data:
         #         if user_id == current_node.data['id']:
         #             return current_node.data
         #
-        #         current_node = current_node.next_node
-        # except TypeError:
-        #     print("Данные не являются словарем или в словаре нет id")
-
-        # current_node = self.beginning
-        # while current_node is not None:
-        #     try:
-        #         if current_node.data.get('id') == user_id:
-        #             return current_node.data
-        #         current_node = current_node.next_node
-        #     except AttributeError:
+        #     else:
         #         print("Данные не являются словарем или в словаре нет id")
-        #         break
-        # return None
+        #     current_node = current_node.next_node
+        # current_node = self.beginning
+
 
 
 # ll = LinkedList()
@@ -97,12 +88,12 @@ class LinkedList:
 # for item in lst: print(item)
 
 
-ll = LinkedList()
-
-ll.insert_beginning({'id': 1, 'username': 'lazzy508509'})
-ll.insert_at_end('idusername')
-ll.insert_at_end([1, 2, 3])
-ll.insert_at_end({'id': 2, 'username': 'mosh_s'})
-
-user_data = ll.get_data_by_id(2)
-print(user_data)
+# ll = LinkedList()
+#
+# ll.insert_beginning({'id': 1, 'username': 'lazzy508509'})
+# ll.insert_at_end('idusername')
+# ll.insert_at_end([1, 2, 3])
+# ll.insert_at_end({'id': 2, 'username': 'mosh_s'})
+#
+# user_data = ll.get_data_by_id(2)
+# print(user_data)
